@@ -1,10 +1,8 @@
 # nuxt-ts-example
 
-> My bee&#39;s knees Nuxt.js project
-
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 

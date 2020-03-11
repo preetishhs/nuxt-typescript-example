@@ -1,7 +1,7 @@
 {
   "name": "nuxt-ts-example",
   "version": "1.0.0",
-  "description": "My bee&#39;s knees Nuxt.js project",
+  "description": "Nuxt in Typescript",
   "author": "preetishhs",
   "private": true,
   "scripts": {
