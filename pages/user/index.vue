@@ -8,30 +8,28 @@
     <button @click="update">Update Info</button>
   </div>
 </template>
-<script>
-import { mapState, mapGetters, mapMutations } from 'vuex'
+<script lang="ts">
+import { Vue, Component, namespace } from 'nuxt-property-decorator'
+const user = namespace('user')
+@Component
+export default class User extends Vue {
+  public localData: object = {}
 
-export default {
-  data() {
-    return {
-      localData: {}
-    }
-  },
+  @user.State
+  public info!: object
 
-  computed: {
-    ...mapState('user', ['info']),
-    ...mapGetters('user', ['fullName'])
-  },
+  @user.Getter
+  public fullName!: string
+
+  @user.Mutation
+  public updateUserInfo!: (data: object) => void
 
   mounted() {
     this.localData = { ...this.localData, ...this.info }
-  },
+  }
 
-  methods: {
-    ...mapMutations('user', ['updateUserInfo']),
-    update() {
-      this.updateUserInfo(this.localData)
-    }
+  public update(): void {
+    this.updateUserInfo(this.localData)
   }
 }
 </script>

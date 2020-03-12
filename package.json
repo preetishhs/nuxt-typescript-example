@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Nuxt in Typescript",
   "author": "preetishhs",
-  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
